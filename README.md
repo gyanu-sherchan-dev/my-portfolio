@@ -25,3 +25,5 @@
 # imported <BrowserRouter><BrowserRouter> : this provides us with ability to use the routes inside of our applicaton
 
 # material-ui/core for icons
+
+# ityped for text animation
