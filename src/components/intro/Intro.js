@@ -11,7 +11,7 @@ const Intro = () => {
         typeSpeed: 150,
         backDelay: 2000,
         showCursor: true,
-        strings: ["Developer", "Designer"],
+        strings: ["Web Developer", "MERN Stack Developer"],
       });
     }
 
