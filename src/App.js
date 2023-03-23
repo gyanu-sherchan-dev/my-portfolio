@@ -4,9 +4,9 @@ import Contact from "./components/contact/Contact";
 import Menu from "./components/menu/Menu";
 import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
-import Testimonials from "./components/testimonials/Testimonials";
+// import Testimonials from "./components/testimonials/Testimonials";
 import TopBar from "./components/topBar/TopBar";
-import Works from "./components/works/Works";
+// import Works from "./components/works/Works";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,8 +17,8 @@ function App() {
       <div className="sections">
         <Intro />
         <Portfolio />
-        <Works />
-        <Testimonials />
+        {/* <Works /> */}
+        {/* <Testimonials /> */}
         <Contact />
       </div>
     </div>

@@ -1,24 +1,47 @@
+@import "../../global.scss";
 .intro {
-  background-color: white;
+  // background-color: #598b95;
+  background-color: #eaeaea;
   display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .left {
     flex: 0.5;
     overflow: hidden;
 
     .imageContainer {
-      width: 700px;
-      height: 700px;
-      background-color: crimson;
+      width: 650px;
+      height: 650px;
+      margin-top: 40px;
+      margin-right: 8px;
+      // background-color: #bbbbc620;
       border-radius: 50%;
+      // box-shadow: -1px 1px 15px;
 
       display: flex;
       justify-content: center;
-      align-items: flex-end;
+      align-items: flex-start;
       float: right;
+      overflow: hidden;
+
+      @include mobile {
+        align-items: flex-start;
+      }
 
       img {
-        width: 90%;
+        width: 100%;
+        object-fit: cover;
+        transform: rotateY(180deg);
+
+        @include mobile {
+          width: 40%;
+          height: 70%;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -36,9 +59,18 @@
       flex-direction: column;
       justify-content: center;
 
+      @include mobile {
+        padding: 10px;
+        text-align: center;
+      }
+
       h1 {
         font-size: 60px;
         margin: 10px 0;
+
+        @include mobile {
+          font-size: 30px;
+        }
       }
       h2 {
         font-size: 35px;
@@ -46,9 +78,13 @@
       h3 {
         font-size: 30px;
 
+        @include mobile {
+          font-size: 20px;
+        }
+
         span {
           font-size: inherit;
-          color: crimson;
+          color: #183e4b;
         }
 
         .ityped-cursor {
