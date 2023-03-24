@@ -3,12 +3,8 @@ import "./Contact.scss";
 
 import emailjs from "@emailjs/browser";
 
-const Contact = () => {
+const Contact = ({ menuOpen }) => {
   const [message, setMessage] = useState(false);
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setMessage(true);
-  // };
 
   const form = useRef();
 
@@ -34,7 +30,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className="contact" id="contact">
+    <div className={"contact " + (menuOpen && "active")} id="contact">
       <div className="left">
         <img src="assets/shake.svg" alt="" />
       </div>
@@ -42,19 +38,12 @@ const Contact = () => {
         <h2>Contact.</h2>
 
         <form ref={form} onSubmit={sendEmail}>
-          <input type="email" name="from_name" placeholder="Email" />
-          <textarea name="message" placeholder="Message" />
+          <input type="email" name="from_name" placeholder="Email" required />
+          <textarea name="message" placeholder="Message" required />
           <input type="submit" value="Send" className="button" />
 
           {message && <span>Thanks, I will reply ASAP 🙂</span>}
         </form>
-
-        {/* <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send</button>
-          {message && <span>Thanks, I will reply ASAP 🙂</span>}
-        </form> */}
       </div>
     </div>
   );

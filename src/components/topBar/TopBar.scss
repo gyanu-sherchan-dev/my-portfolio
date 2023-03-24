@@ -2,10 +2,8 @@
 .topBar {
   width: 100%;
   height: 70px;
-  // background-color: white;
   background-color: #183e4b;
 
-  // color: $maincolor;
   color: white;
   position: fixed;
   top: 0;
@@ -70,10 +68,10 @@
     }
   }
   &.active {
-    // background-color: $maincolor;
     background-color: #eaeaea;
 
     color: #183e4b;
+    z-index: 999;
 
     span {
       font-size: 18px;
@@ -83,7 +81,6 @@
     .hamburger {
       span {
         &:first-child {
-          // background-color: white;
           background-color: #7d0fc6;
           transform: rotate(45deg);
         }

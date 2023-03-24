@@ -10,7 +10,7 @@ import {
   contentPortfolio,
 } from "../../data";
 
-const Portfolio = () => {
+const Portfolio = ({ menuOpen }) => {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
   const list = [
@@ -60,7 +60,7 @@ const Portfolio = () => {
   }, [selected]);
 
   return (
-    <div className="portfolio" id="portfolio">
+    <div className={"portfolio " + (menuOpen && "active")} id="portfolio">
       <h1>Portfolio</h1>
       <ul>
         {list.map((item, id) => {

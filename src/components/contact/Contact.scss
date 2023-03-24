@@ -1,9 +1,14 @@
 @import "../../global.scss";
 
 .contact {
-  // background-color: white;
   background-color: #eaeaea;
   display: flex;
+
+  &.active {
+    background-color: #fff;
+    filter: brightness(50%) blur(5px);
+    transition: 0.5s ease;
+  }
 
   @include mobile {
     flex-direction: column;

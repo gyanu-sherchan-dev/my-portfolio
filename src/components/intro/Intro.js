@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./Intro.scss";
 import { init } from "ityped";
 
-const Intro = () => {
+const Intro = ({ menuOpen }) => {
   const stopRef = useRef(false);
   const textRef = useRef();
   useEffect(() => {
@@ -21,7 +21,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <div className="intro" id="intro">
+    <div className={"intro " + (menuOpen && "active")} id="intro">
       <div className="left">
         <div className="imageContainer">
           <img src="assets/man2.png" alt="" />

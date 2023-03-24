@@ -1,10 +1,20 @@
 @import "../../global.scss";
 .portfolio {
   background-color: white;
+  padding: 60px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+
+  &.active {
+    filter: brightness(50%) blur(5px);
+    transition: 0.5s ease;
+  }
+
+  @include mobile {
+    padding: 12px 0 0 0;
+  }
 
   h1 {
     font-size: 50px;
@@ -17,10 +27,9 @@
 
   ul {
     margin: 10px;
-    padding: 0;
+    padding-top: 4px;
     list-style: none;
     display: flex;
-
     @include mobile {
       flex-wrap: wrap;
       justify-content: center;
@@ -28,6 +37,7 @@
   }
   .container {
     width: 70%;
+    padding-top: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
