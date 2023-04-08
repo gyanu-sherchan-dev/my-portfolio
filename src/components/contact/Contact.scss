@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .contact {
-  background-color: #eaeaea;
+  background: url(../../../public/assets/bgcolor/email-pattern.webp);
   display: flex;
 
   &.active {

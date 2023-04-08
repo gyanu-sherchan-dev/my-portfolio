@@ -1,6 +1,7 @@
 @import "../../global.scss";
 .intro {
-  background-color: #eaeaea;
+  background: url(../../../public/assets/bgcolor/ep_naturalwhite.webp);
+  filter: brightness(105%);
   display: flex;
   transition: 0.5s ease;
 
@@ -43,6 +44,7 @@
           width: 40%;
           height: 70%;
           object-fit: cover;
+          margin-top: 20px;
         }
       }
     }
@@ -86,7 +88,8 @@
 
         span {
           font-size: inherit;
-          color: #183e4b;
+          color: blueviolet;
+          filter: brightness(110%);
         }
 
         .ityped-cursor {
@@ -102,11 +105,80 @@
           }
         }
       }
+
+      .intro-btn {
+        width: 240px;
+        height: 60px;
+        margin-top: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+
+        @include mobile {
+          margin-top: 60px;
+          margin-bottom: 30px;
+          overflow-y: hidden;
+        }
+
+        a {
+          margin-right: 10px;
+          width: 90px;
+          height: max-content;
+          background-color: rgb(108, 209, 220, 0.2);
+          filter: brightness(110%);
+          text-align: center;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 10px 10px;
+          text-decoration: none;
+          border-radius: 8px;
+          box-shadow: -1px 1px 1px 0.5px;
+          animation: cssAnimation_1 4s infinite;
+        }
+        @keyframes cssAnimation_1 {
+          from {
+            background-color: rgb(77, 227, 40);
+          }
+
+          to {
+            background-color: rgb(108, 209, 220, 0.2);
+          }
+        }
+
+        button {
+          width: 80px;
+          height: max-content;
+          font-size: 16px;
+          padding: 10px 0;
+          border-radius: 8px;
+          border: none;
+          color: blue;
+          font-weight: 600;
+          background-color: rgb(159, 103, 212, 0.2);
+          box-shadow: -1px 1px 1px 0.5px;
+          cursor: pointer;
+          animation: cssAnimation_0 4s infinite;
+        }
+        @keyframes cssAnimation_0 {
+          from {
+            background-color: red;
+            color: white;
+          }
+
+          to {
+            background-color: rgb(159, 103, 212, 0.2);
+            color: blue;
+          }
+        }
+      }
     }
-    a {
+    .downArrow {
       position: absolute;
       bottom: 10px;
       left: 40%;
+      color: blueviolet;
+      filter: drop-shadow(0px 14px 1px blueviolet);
     }
 
     img {

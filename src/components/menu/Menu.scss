@@ -17,7 +17,8 @@
   justify-content: center;
 
   &.active {
-    background: #eaeaea;
+    background: url(../../../public/assets/bgcolor/darkness.webp);
+    filter: brightness(120%);
     right: 0;
   }
 
@@ -27,7 +28,7 @@
     list-style: none;
     font-size: 30px;
     font-weight: 600;
-    color: #000;
+    color: rgb(171, 216, 215);
     width: 60%;
 
     li {

@@ -34,7 +34,11 @@ const Intro = ({ menuOpen }) => {
           <h3>
             <span ref={textRef}></span>
           </h3>
-          <a href="#portfolio">
+          <div className="intro-btn">
+            <a href="#contact">Let's talk</a>
+            <button>Hire Me</button>
+          </div>
+          <a href="#portfolio" className="downArrow">
             <img src="assets/down.png" alt="" />
           </a>
         </div>

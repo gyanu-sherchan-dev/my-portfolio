@@ -68,14 +68,17 @@
     }
   }
   &.active {
-    background-color: #eaeaea;
+    background: url(../../../public/assets/bgcolor/darkness.webp);
+    filter: brightness(120%);
 
-    color: #183e4b;
+    color: rgb(171, 216, 215);
+    font-weight: 900;
     z-index: 999;
 
     span {
       font-size: 18px;
       font-weight: 700;
+      letter-spacing: 1px;
     }
 
     .hamburger {
