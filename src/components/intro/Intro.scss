@@ -134,17 +134,17 @@
           text-decoration: none;
           border-radius: 8px;
           box-shadow: -1px 1px 1px 0.5px;
-          animation: cssAnimation_1 4s infinite;
+          // animation: cssAnimation_1 0.3s 3s;
         }
-        @keyframes cssAnimation_1 {
-          from {
-            background-color: rgb(77, 227, 40);
-          }
+        // @keyframes cssAnimation_1 {
+        //   from {
+        //     background-color: rgb(77, 227, 40);
+        //   }
 
-          to {
-            background-color: rgb(108, 209, 220, 0.2);
-          }
-        }
+        //   to {
+        //     background-color: rgb(108, 209, 220, 0.2);
+        //   }
+        // }
 
         button {
           width: 80px;
@@ -158,19 +158,19 @@
           background-color: rgb(159, 103, 212, 0.2);
           box-shadow: -1px 1px 1px 0.5px;
           cursor: pointer;
-          animation: cssAnimation_0 4s infinite;
+          // animation: cssAnimation_0 1ms 5s;
         }
-        @keyframes cssAnimation_0 {
-          from {
-            background-color: red;
-            color: white;
-          }
+        // @keyframes cssAnimation_0 {
+        //   from {
+        //     background-color: red;
+        //     color: white;
+        //   }
 
-          to {
-            background-color: rgb(159, 103, 212, 0.2);
-            color: blue;
-          }
-        }
+        //   to {
+        //     background-color: rgb(159, 103, 212, 0.2);
+        //     color: blue;
+        //   }
+        // }
       }
     }
     .downArrow {
