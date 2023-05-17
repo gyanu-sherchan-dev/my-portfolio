@@ -1,13 +1,20 @@
+import financeTracerImg from "../src/assest/projects/financeTracker.png";
+import portfolioImg from "../src/assest/projects/portfolio.png";
+
 export const featuredPortfolio = [
   {
     id: 1,
-    title: "Social Media App",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+    title: "Full-stack-FinanceTracker",
+    img: financeTracerImg,
+    link: "https://elegant-cardigan-newt.cyclic.app/",
+    gitHub: "https://github.com/gyanu-sherchan-dev/financeTracker2.0",
   },
   {
     id: 2,
-    title: "Rampa UI Design",
-    img: "https://cdn.dribbble.com/users/702789/screenshots/15054318/media/4ea5d492b7b07eebc9528ff960794879.png?compress=1&resize=1200x900",
+    title: "Portfolio",
+    img: portfolioImg,
+    link: "https://my-portfolio-eapojdpsx-gyanu2200.vercel.app/",
+    gitHub: "https://github.com/gyanu-sherchan-dev/my-portfolio",
   },
   {
     id: 3,

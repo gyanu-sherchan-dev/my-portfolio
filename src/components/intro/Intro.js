@@ -36,7 +36,7 @@ const Intro = ({ menuOpen }) => {
           </h3>
           <div className="intro-btn">
             <a href="#contact">Let's talk</a>
-            <button>Hire Me</button>
+            {/* <button>Hire Me</button> */}
           </div>
           <a href="#portfolio" className="downArrow">
             <img src="assets/down.png" alt="" />

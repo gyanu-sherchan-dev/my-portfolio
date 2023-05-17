@@ -5,9 +5,9 @@ import "./Portfolio.scss";
 import {
   featuredPortfolio,
   webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
+  // mobilePortfolio,
+  // designPortfolio,
+  // contentPortfolio,
 } from "../../data";
 
 const Portfolio = ({ menuOpen }) => {
@@ -22,18 +22,18 @@ const Portfolio = ({ menuOpen }) => {
       id: "web",
       title: "Web App",
     },
-    {
-      id: "mobile",
-      title: "Mobile App",
-    },
-    {
-      id: "designed",
-      title: "Designed",
-    },
-    {
-      id: "content",
-      title: "Content",
-    },
+    // {
+    //   id: "mobile",
+    //   title: "Mobile App",
+    // },
+    // {
+    //   id: "designed",
+    //   title: "Designed",
+    // },
+    // {
+    //   id: "content",
+    //   title: "Content",
+    // },
   ];
 
   useEffect(() => {
@@ -44,15 +44,15 @@ const Portfolio = ({ menuOpen }) => {
       case "web":
         setData(webPortfolio);
         break;
-      case "mobile":
-        setData(mobilePortfolio);
-        break;
-      case "design":
-        setData(designPortfolio);
-        break;
-      case "content":
-        setData(contentPortfolio);
-        break;
+      // case "mobile":
+      //   setData(mobilePortfolio);
+      //   break;
+      // case "design":
+      //   setData(designPortfolio);
+      //   break;
+      // case "content":
+      //   setData(contentPortfolio);
+      //   break;
 
       default:
         setData(featuredPortfolio);
@@ -76,10 +76,22 @@ const Portfolio = ({ menuOpen }) => {
       </ul>
       <div className="container">
         {data.map((item, id) => {
+          console.log(item.link);
           return (
-            <div className="item">
-              <img src={item.img} alt="" />
-              <h3>{item.title}</h3>
+            <div className="itemAndLink">
+              <div className="item">
+                <img src={item.img} alt="" />
+                <h3>{item.title}</h3>
+
+                <div className="link">
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-square-github"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           );
         })}
