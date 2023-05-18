@@ -1,16 +1,14 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import "./Contact.scss";
+import { toast } from "react-toastify";
 
 import emailjs from "@emailjs/browser";
 
 const Contact = ({ menuOpen }) => {
-  const [message, setMessage] = useState(false);
-
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setMessage(true);
 
     emailjs
       .sendForm(
@@ -23,11 +21,17 @@ const Contact = ({ menuOpen }) => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
+
+          toast.success("Thanks, for the message. I will reply ASAP 🙂", {
+            autoClose: 2000,
+          });
         },
         (error) => {
           console.log(error.text);
         }
       );
+    form.current.reset();
+    // setMessage(false);
   };
   return (
     <div className={"contact " + (menuOpen && "active")} id="contact">
@@ -41,8 +45,6 @@ const Contact = ({ menuOpen }) => {
           <input type="email" name="from_name" placeholder="Email" required />
           <textarea name="message" placeholder="Message" required />
           <input type="submit" value="Send" className="button" />
-
-          {message && <span>Thanks, I will reply ASAP 🙂</span>}
         </form>
       </div>
     </div>

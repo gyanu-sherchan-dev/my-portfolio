@@ -8,6 +8,8 @@ import Portfolio from "./components/portfolio/Portfolio";
 import TopBar from "./components/topBar/TopBar";
 // import Skills from "./components/skills/Skills";
 // import Works from "./components/works/Works";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,6 +25,7 @@ function App() {
         {/* <Testimonials /> */}
         <Contact menuOpen={menuOpen} />
       </div>
+      <ToastContainer />
     </div>
   );
 }

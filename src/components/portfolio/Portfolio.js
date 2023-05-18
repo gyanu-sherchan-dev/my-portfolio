@@ -61,7 +61,7 @@ const Portfolio = ({ menuOpen }) => {
 
   return (
     <div className={"portfolio " + (menuOpen && "active")} id="portfolio">
-      <h1>Portfolio</h1>
+      <h1 className="mb-5">Projects</h1>
       <ul>
         {list.map((item, id) => {
           return (
@@ -87,7 +87,11 @@ const Portfolio = ({ menuOpen }) => {
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
                     <i class="fa-solid fa-link"></i>
                   </a>
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={item.gitHub}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i class="fa-brands fa-square-github"></i>
                   </a>
                 </div>
