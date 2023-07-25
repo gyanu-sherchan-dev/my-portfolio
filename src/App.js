@@ -6,7 +6,7 @@ import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
 // import Testimonials from "./components/testimonials/Testimonials";
 import TopBar from "./components/topBar/TopBar";
-// import Skills from "./components/skills/Skills";
+import Skills from "./components/skills/Skills";
 // import Works from "./components/works/Works";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +19,7 @@ function App() {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
         <Intro menuOpen={menuOpen} />
-        {/* <Skills /> */}
+        <Skills menuOpen={menuOpen} />
         <Portfolio menuOpen={menuOpen} />
         {/* <Works /> */}
         {/* <Testimonials /> */}

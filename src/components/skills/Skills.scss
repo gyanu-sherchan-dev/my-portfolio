@@ -1,4 +1,120 @@
 .skills {
-  background-color: #e0ecda;
+  background-color: white;
   text-align: center;
+  overflow: hidden;
+  margin: auto;
+  h2 {
+    margin-top: 4rem;
+    font-size: 40px;
+  }
+
+  &.active {
+    filter: brightness(50%) blur(5px);
+    transition: 0.5s ease;
+  }
+
+  .skill {
+    margin-top: 4rem;
+    //first img section
+    .firstImgSection {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      animation: move-ltr 16s linear infinite;
+      margin-top: 16px;
+      width: 90%;
+
+      .img {
+        width: 10rem;
+        height: 8rem;
+        margin-left: 4rem;
+        // background-color: yellow;
+
+        .icon {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          font-size: 6rem;
+          color: blue;
+          font-weight: bolder;
+          span {
+            font-size: 1rem;
+            font-weight: bold;
+            color: black;
+          }
+        }
+      }
+
+      @keyframes move-ltr {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        20% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0.6;
+        }
+        100% {
+          transform: translateX(100%);
+          opacity: 0.4;
+        }
+      }
+    }
+
+    //second Img section
+    .secondImgSection {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      animation: move-rtl 16s linear infinite;
+      margin-top: 4rem;
+      .img {
+        width: 10rem;
+        height: 8rem;
+        margin-left: 4rem;
+        // background-color: yellow;
+
+        .icon {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          font-size: 6rem;
+          color: blue;
+          font-weight: bolder;
+          span {
+            font-size: 1rem;
+            font-weight: bold;
+            color: black;
+          }
+        }
+      }
+
+      @keyframes move-rtl {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        20% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0.6;
+        }
+        100% {
+          transform: translateX(-100%);
+          opacity: 0.4;
+        }
+      }
+    }
+  }
 }

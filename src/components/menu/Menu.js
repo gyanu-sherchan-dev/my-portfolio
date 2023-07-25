@@ -8,6 +8,9 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
           <a href="#intro">Home</a>
         </li>
         <li onClick={() => setMenuOpen(false)}>
+          <a href="#skills">Skills</a>
+        </li>
+        <li onClick={() => setMenuOpen(false)}>
           <a href="#portfolio">Portfolio</a>
         </li>
         {/* <li onClick={() => setMenuOpen(false)}>
